@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require jquery.turbolinks
+//= require bootstrap/bootstrap
+//= require the-story/lazyload
+//= require the-story/spin
+//= require the-story/lightbox
+//= require the-story/main
+//= require the-story/jquery.history
+//= require the-story/hashchange
+//= require the-story/html5shiv
+
+
+
+
