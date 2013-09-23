@@ -33,8 +33,11 @@ body {
 }
 
 #flash_notice, #flash_alert {
-  padding: 5px 8px;
-  margin: 10px 0;
+  position:absolute;
+  z-index:99999999;
+  padding: 0px 8px;
+  margin: 0px 0px;
+  opacity: 1;
 }
 #flash_notice {
   background-color: #CFC;
