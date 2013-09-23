@@ -8,7 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module OlgasHelpers
   class Application < Rails::Application
-
+    config.assets.initialize_on_precompile = false
     # don't generate RSpec tests for views and helpers
     config.generators do |g|
       

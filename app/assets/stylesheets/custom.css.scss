@@ -1,6 +1,14 @@
 @import "bootstrap/bootstrap";
 @import "the-stroy/the-story";
 
+.edit-window {
+  padding-top: 50px;
+}
+
+.navbar-inverse {
+  opacity: .93;
+}
+
 .navbar li a {
   padding-top: 10px;
   padding-bottom: 10px;
