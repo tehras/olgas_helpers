@@ -1,6 +1,11 @@
 @import "bootstrap/bootstrap";
 @import "the-stroy/the-story";
 
+.navbar li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .navbar .navbar-container {
   min-height: auto;
 }
