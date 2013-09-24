@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.0'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -15,10 +14,16 @@ gem 'figaro'
 gem 'rolify'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'font-awesome-rails'
-gem 'rails_12factor', group: :production
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'sqlite3'
+
+end
+group :production do
+    gem 'pg', '0.15.1'
+    gem 'rails_12factor', '0.0.2'
 end
 group :development, :test do
   gem 'factory_girl_rails'
