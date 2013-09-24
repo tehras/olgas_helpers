@@ -41,8 +41,22 @@ body {
 
 }
 
+.form-expandable {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: auto;
+  min-widht: 300px;
+  width: 35%;
+  padding: 0px 0px 0px 0px;
+  }
+
 .below-submit {
   padding: 10px 0px;
+}
+
+#expand-form {
+  height: 40px;
+  width: 70%;
 }
 
 #flash_notice, #flash_alert {
@@ -75,3 +89,5 @@ body {
   color: #080808;
   background-color: #080808;
 }
+
+

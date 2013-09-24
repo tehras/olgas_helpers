@@ -9,12 +9,14 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+
 //= require jquery
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require bootstrap/bootstrap
 //= require the-story/lazyload
+//= require the-story/jquery.mobile
 //= require the-story/spin
 //= require the-story/lightbox
 //= require the-story/main
