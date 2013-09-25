@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921153707) do
+ActiveRecord::Schema.define(version: 20130925000249) do
+
+  create_table "caretakers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.float    "age"
+    t.string   "nationality"
+    t.text     "comment"
+    t.boolean  "citizen"
+    t.boolean  "car"
+    t.boolean  "driver_license"
+    t.float    "english"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
