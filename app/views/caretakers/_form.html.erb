@@ -1,20 +1,20 @@
-<%= simple_form_for(@caretaker) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for @caretaker do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :email %>
-    <%= f.input :age %>
-    <%= f.input :nationality %>
-    <%= f.input :comment %>
-    <%= f.input :citizen %>
-    <%= f.input :car %>
-    <%= f.input :driver_license %>
-    <%= f.input :english %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email %>
+      <%= f.input :age %>
+      <%= f.input :nationality %>
+      <%= f.input :comment %>
+      <%= f.input :citizen %>
+      <%= f.input :car %>
+      <%= f.input :driver_license %>
+      <%= f.input :english %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
 <% end %>

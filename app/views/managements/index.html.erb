@@ -1,9 +1,9 @@
 <div class="edit-window">
 
-  <%= render 'caretakers/form', :caretaker => @caretaker, :url => url_for(:controller => 'caretakers', :action => 'create') %>
-
+  <%= render :partial => 'caretakers/form', :controller => @caretaker %>
 
 </div>
+
 <!-- expand and collaps -->
 <script>
     $(".expanderContent").hide();
@@ -12,4 +12,3 @@
         $(this).parent().next("div").toggle('slow');
     });
 </script>
-
