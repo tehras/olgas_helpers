@@ -1,6 +1,9 @@
-<%= simple_form_for @caretaker do |f| %>
-    <%= f.error_notification %>
 
+<div class='edit-window'>
+<%= simple_form_for @caretaker, :url => {:action => 'create'} do |f| %>
+<%= f.error_notification %>
+<h4 class="expanderHead"><span class="expanderSign" style="cursor:pointer;">[+]</span> Update My Information</h4>
+<div class='expanderContent'>
     <div class="form-inputs">
       <%= f.input :first_name %>
       <%= f.input :last_name %>
@@ -17,4 +20,6 @@
     <div class="form-actions">
       <%= f.button :submit %>
     </div>
+</div>
 <% end %>
+</div>

@@ -5,4 +5,8 @@ class ManagementsController < ApplicationController
     @user = User.all
     @caretaker = Caretaker.new
   end
+
+  def new
+    @caretaker = Caretaker.new
+  end
 end

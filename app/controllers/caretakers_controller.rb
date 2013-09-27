@@ -28,7 +28,7 @@ class CaretakersController < ApplicationController
 
     respond_to do |format|
       if @caretaker.save
-        format.html { redirect_to @caretaker, notice: 'Caretaker was successfully created.' }
+        format.html { redirect_to :back, notice: 'Caretaker was successfully created.' }
         format.json { render action: 'show', status: :created, location: @caretaker }
       else
         format.html { render action: 'new' }
