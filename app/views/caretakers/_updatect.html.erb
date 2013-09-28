@@ -1,0 +1,36 @@
+<div class='management-window'>
+  <% caretaker_array = Caretaker.all.map { |caretaker| [caretaker.first_name + caretaker.last_name] } %>
+
+      <h4 class="expanderHead"><span class="expanderSign" style="cursor:pointer;">[+]</span> Update Caretaker</h4>
+
+      <div class='expanderContent'>
+        <div class="form-inputs">
+          <table>
+
+
+            <tbody>
+            <% Caretaker.all.map.each do |caretaker| %>
+                <tr>
+                  <td class="expanderHead"><span class="expanderSign" style="cursor:pointer;">[+]</span></td>
+                    <td><%= caretaker.first_name + caretaker.last_name%></td>
+                    <td><%= link_to 'More', caretaker %></td>
+                    <td><%= link_to 'Edit', edit_caretaker_path(caretaker) %></td>
+                    <td><%= link_to 'Delete', caretaker, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                </tr>
+                <div class='expanderContent'>
+                  <%= simple_form_for @caretaker, :class => 'form-expandable', :url => {:method => :path} do |f| %>
+
+                      <%= f.label :first_name %>
+                      <%= f.text_field :first_name, :autofocused => true, :value => caretaker.first_name, :class => 'form-control', :id => 'expand-form' %>
+
+                  <% end %>
+                </div>
+            <% end %>
+            </tbody>
+          </table>
+
+
+        </div>
+      </div>
+    </div>
+</div>

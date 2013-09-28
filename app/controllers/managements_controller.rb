@@ -6,7 +6,4 @@ class ManagementsController < ApplicationController
     @caretaker = Caretaker.new
   end
 
-  def new
-    @caretaker = Caretaker.new
-  end
 end

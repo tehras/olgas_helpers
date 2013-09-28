@@ -1,4 +1,5 @@
 class CaretakersController < ApplicationController
+
   before_action :set_caretaker, only: [:show, :edit, :update, :destroy]
 
   # GET /caretakers

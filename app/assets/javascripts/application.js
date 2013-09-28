@@ -24,6 +24,15 @@
 //= require the-story/hashchange
 //= require the-story/html5shiv
 
-
+$(function() {
+    $("#locations_search input").keyup(function() {
+        $.get($("#locations_search").attr("action"), $("#locations_search").serialize(), null, "script");
+        return false;
+    });
+    $(".location").click(function() {
+        $(".location").not(this).removeClass('location-clicked h4');
+        $(this).toggleClass('location-clicked h4');
+    });
+});
 
 
