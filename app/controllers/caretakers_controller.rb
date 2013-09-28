@@ -43,7 +43,7 @@ class CaretakersController < ApplicationController
   def update
     respond_to do |format|
       if @caretaker.update(caretaker_params)
-        format.html { redirect_to @caretaker, notice: 'Caretaker was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Caretaker was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -57,7 +57,7 @@ class CaretakersController < ApplicationController
   def destroy
     @caretaker.destroy
     respond_to do |format|
-      format.html { redirect_to caretakers_url }
+      format.html { redirect_to :back}
       format.json { head :no_content }
     end
   end
