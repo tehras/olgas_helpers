@@ -33,28 +33,24 @@
 
                   <br />
                   <%= f.label "Citizen?" %>
-                  <% if caretaker.citizen == true %>
-                  <%= f.check_box :citizen, {:value => caretaker.citizen, :checked => true}, true, false %> <br />
-                  <% else %>
-                  <%= f.check_box :citizen, {:value => caretaker.citizen, :checked => false}, true, false %> <br />
-                  <% end %>
+                  <%= f.check_box :citizen, {:value => caretaker.citizen, :checked => caretaker.citizen}, true, false %> <br />
 
                   <%= f.label "Has A Car?" %>
                   <% if caretaker.car == true %>
                   <%= f.check_box :car, {:value => caretaker.car, :checked => true}, true, false %> <br />
                   <% else %>
-                  <%= f.check_box :car, {:value => caretaker.car, :checked => false}, true, false %> <br />
+                  <%= f.check_box :car, {:value => caretaker.car}, true, false %> <br />
                   <% end %>
 
                   <%= f.label "Has Driver License?" %>
                   <% if caretaker.driver_license == true %>
                       <%= f.check_box :driver_license, {:value => caretaker.driver_license, :checked => true}, true, false %> <br />
                   <% else %>
-                      <%= f.check_box :driver_license, {:value => caretaker.driver_license, :checked => false}, true, false %> <br />
+                      <%= f.check_box :driver_license, {:value => caretaker.driver_license}, true, false %> <br />
                   <% end %>
 
                   <%= f.label "English (1 = bad, 9 = fluent)"%>
-                  <%= f.select :english, 1..9, :value => caretaker.english%> <br />
+                  <%= f.select :english, 1..9, :selected => caretaker.english.to_i %> <br />
 
                   <div class="form-actions">
                     <%= f.button :submit, 'Update' ,:class => 'btn-primary' %>
