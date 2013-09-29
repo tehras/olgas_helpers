@@ -1,18 +1,52 @@
 @import "bootstrap/bootstrap";
 @import "the-stroy/the-story";
 
+#dropdown li ul {
+  display: none;
+}
+#dropdown li:hover > ul {
+  display: block;
+}
+
 #updateExpanderHead
 {
   width: 400px;
   min-width: 150px;
 }
 
+#popdown
+{
+  height: 47px;
+  color: #ffffff;
+  padding: 0px, 0px, 0px, 0px;
+}
+#dropdown
+{
+  height: 47px;
+  color: #000000;
+}
+#dropdown .open
+{
+  height: 47px;
+  color: black;
+}
+
+#popdown .open
+{
+  color: black;
+  height: 47px;
+}
 
 .form-control #expand-form
 {
   width: 30%;
 }
 
+div.a.scroll.brand-4.open
+{
+  color:black;
+  height:47;
+}
 
 
 .expanderContent

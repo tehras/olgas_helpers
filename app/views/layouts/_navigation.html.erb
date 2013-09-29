@@ -26,37 +26,57 @@
          <% end %>
 
         <% if user_signed_in? %>
-            <li>
-              <%= link_to 'Logout', destroy_user_session_path, :method => 'delete', :class => 'scroll brand-4' %>
+            <li style="height: 47px" class="hoverli"  >
+
+              <% User.all.map.each do |user| %>
+              <a class="scroll brand-4" data-toggle="dropdown" href="#"><%= "#{user.name.capitalize}" %></a>
+              <% end %>
+
+              <ul class="dropdown-menu navbar-inverse file_menu" role="menu">
+                <li class="scroll brand-4">
+                  <%= link_to 'My Account', edit_user_registration_path,:style=>"color:white" %>
+                </li>
+                <% if current_user.has_role? :admin %>
+                    <li class="scroll brand-4">
+                      <!--<%= link_to 'Admin', users_path %>-->
+                      <%= link_to 'Management', managements_path, :style=>"color:white"%>
+                    </li>
+                <% end %>
+                <li class="scroll fedato brand-4" >
+                  <%= link_to 'Logout', destroy_user_session_path, :method => 'delete', :style=>"color:white" %>
+                </li>
+              </ul>
+
             </li>
+
         <% else %>
 
             <li>
               <%= link_to 'Login', new_user_session_path, :class => 'scroll brand-4' %>
             </li>
-        <% end %>
-        <% if user_signed_in? %>
-            <li>
-              <%= link_to 'My Account', edit_user_registration_path, :class => 'scroll brand-4' %>
-            </li>
-            <% if current_user.has_role? :admin %>
-                <li>
-                  <!--<%= link_to 'Admin', users_path, :class => 'scroll brand-4' %>-->
-                  <%= link_to 'Management', managements_path, :class => 'scroll brand-4' %>
-                </li>
-            <% end %>
-        <% else %>
             <li>
               <%= link_to 'Sign up', new_user_registration_path, :class => 'scroll brand-4' %>
             </li>
         <% end %>
+
       </ul>
     </div>
   </div>
   <!-- /.navbar-collapse -->
 </nav>
 
+<script>
+$(document).ready(function () {
+$(".hoverli").hover(
+function () {
+$('ul.file_menu').slideDown('slow');
+},
+function () {
+$('ul.file_menu').slideUp('medium');
+}
+);
 
-
+});
+</script>
 
 

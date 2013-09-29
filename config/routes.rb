@@ -1,5 +1,7 @@
 OlgasHelpers::Application.routes.draw do
 
+  resources :clients
+
   root :to => "home#index"
 
   get '/index', to: 'home#index'
@@ -7,5 +9,6 @@ OlgasHelpers::Application.routes.draw do
   resources :users
   resources :caretakers
   resources :managements
+  resources :clients
 
 end

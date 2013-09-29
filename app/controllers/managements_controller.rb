@@ -4,6 +4,7 @@ class ManagementsController < ApplicationController
   def index
     @user = User.all
     @caretaker = Caretaker.new
+    @client = Client.new
   end
 
 end

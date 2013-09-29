@@ -1,8 +1,9 @@
 <div class="edit-window">
-
+<h3>Caretaker Options:</h3>
   <%= render :partial => 'caretakers/newct', :controller => @caretaker %>
   <%= render :partial => 'caretakers/updatect', :controller => @caretaker %>
-
+<h3 style="text-align: left; padding-left: -20px">Client Options:</h3>
+ <%= render :partial => 'clients/newcl', :controller => @client %>
 </div>
 
 <!-- expand and collaps -->
